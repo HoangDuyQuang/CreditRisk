@@ -13,18 +13,18 @@ The final solution uses XGBoost, Optuna, and SHAP to create a robust, explainabl
 
 ## 🛠️ Tech Stack
 
-Language: Python
-Machine Learning: XGBoost
-Hyperparameter Optimization: Optuna
-Explainable AI: SHAP
-Data Processing: Pandas, NumPy
-Visualization: Matplotlib, Seaborn
-Utilities: Scikit-Learn
+- Language: Python
+- Machine Learning: XGBoost
+- Hyperparameter Optimization: Optuna
+- Explainable AI: SHAP
+- Data Processing: Pandas, NumPy
+- Visualization: Matplotlib, Seaborn
+- Utilities: Scikit-Learn
 
 ## 📂 Project Structure
 
 - ├── Data.ipynb        # Data cleaning & preprocessing
-- ├── Feature.ipynb     # Feature engineering & feature analysis
+- ├── Feature.ipynb     # Feature engineering
 - ├── Train.ipynb       # Model training, tuning, evaluation
 - ├── README.md
 
@@ -38,7 +38,7 @@ The project pipeline is divided into two main phases, corresponding to the repos
 4. **Feature Engineering:** Synthesized new indicators such as total_debt to capture the financial leverage and debt burden of applicants.
 
 ### Phase 2: Feature Engineering (Feature.ipynb) 
-Initialize 4 new characteristics: free_cash_flow, net_income_after_total_debt, risk_emp_debt, and adjusted_loan_to_income.
+- Initialize 4 new characteristics: free_cash_flow, net_income_after_total_debt, risk_emp_debt, and adjusted_loan_to_income.
 
 ### Phase 3: Model Training & Risk Mitigation (Train.ipynb) 
 1. **Strict Data Splitting:** Implemented a rigorous **70% Train / 15% Validation / 15% Test** split. Used the stratify parameter to preserve the highly imbalanced class distribution across all sets. The Test set was strictly locked away until final evaluation.
@@ -50,9 +50,7 @@ Initialize 4 new characteristics: free_cash_flow, net_income_after_total_debt, r
 
 ## 📊 Model Performance
 ### The project focuses primarily on:
-PR-AUC
-Recall
-F2-Score
+PR-AUC | Recall | F2-Score
 ### Ranking Performance
 Metric	Score
 PR-AUC	0.8937
