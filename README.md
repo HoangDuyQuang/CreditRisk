@@ -6,9 +6,13 @@ Credit Risk Default Prediction is an end-to-end machine learning project focused
 The project was built with a strong emphasis on real-world credit risk management, not leaderboard-style metrics. Instead of optimizing for Accuracy or ROC-AUC alone, the system prioritizes:
 
 Detecting as many risky borrowers as possible (high Recall)
+
 Reducing costly False Negatives
+
 Optimizing decision thresholds based on business objectives
+
 Maintaining model interpretability through Explainable AI (XAI)
+
 The final solution uses XGBoost, Optuna, and SHAP to create a robust, explainable, and production-oriented credit risk pipeline.
 
 ## 🛠️ Tech Stack
@@ -52,9 +56,9 @@ The project pipeline is divided into two main phases, corresponding to the repos
 ### The project focuses primarily on:
 PR-AUC | Recall | F2-Score
 ### Ranking Performance
-Metric	Score
-PR-AUC	0.8937
-ROC-AUC	0.94
+- Metric	Score
+- PR-AUC	0.8937
+- ROC-AUC	0.94
 ### Business-Oriented Performance
 (Optimal Threshold = 0.21)
 
