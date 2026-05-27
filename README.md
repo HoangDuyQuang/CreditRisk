@@ -46,7 +46,7 @@ The project pipeline is divided into two main phases, corresponding to the repos
 
 ### Phase 3: Model Training & Risk Mitigation (Train.ipynb) 
 1. **Strict Data Splitting:** Implemented a rigorous **70% Train / 15% Validation / 15% Test** split. Used the stratify parameter to preserve the highly imbalanced class distribution across all sets. The Test set was strictly locked away until final evaluation.
-2. **Class Imbalance Handling:** Calculated the natural scale_pos_weight (majority/minority ratio) to penalize the XGBoost loss function, forcing the model to focus on the minority default class.
+2. **Class Imbalance Handling:** Calculated the financial_weights to penalize the XGBoost loss function, forcing the model to focus on the minority default class.
 3. **Bayesian Hyperparameter Tuning:** Utilized Optuna to autonomously search for the optimal model complexity constraints (learning_rate, max_depth, colsample_bytree, subsample, min_child_weight).
 4. **Overfitting Prevention:** Integrated early_stopping_rounds=30 evaluated on the Validation set.
 5. **Threshold Optimization:** Scanned a fine-grained threshold space (0.01 steps) to maximize the **F2-Score** (which weights Recall twice as much as Precision), overriding the naive 0.5 default threshold.
