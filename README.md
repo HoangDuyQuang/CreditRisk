@@ -49,15 +49,15 @@ Initialize 4 new characteristics: free_cash_flow, net_income_after_total_debt, r
 6. **Explainable AI (XAI):** Deployed SHAP's TreeExplainer to generate Global Summary Plots (identifying top risk drivers) and Local Waterfall Plots (providing transparent, individual explanations for loan rejections).
 
 ## 📊 Model Performance
-- The project focuses primarily on:
+### The project focuses primarily on:
 PR-AUC
 Recall
 F2-Score
-- Ranking Performance
+### Ranking Performance
 Metric	Score
 PR-AUC	0.8937
 ROC-AUC	0.94
-- Business-Oriented Performance
+### Business-Oriented Performance
 (Optimal Threshold = 0.21)
 
 - Metric	Score
