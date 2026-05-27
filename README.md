@@ -20,11 +20,13 @@ Explainable AI: SHAP
 Data Processing: Pandas, NumPy
 Visualization: Matplotlib, Seaborn
 Utilities: Scikit-Learn
+
 📂 Project Structure
 ├── Data.ipynb        # Data cleaning & preprocessing
 ├── Feature.ipynb     # Feature engineering & feature analysis
 ├── Train.ipynb       # Model training, tuning, evaluation
 ├── README.md
+
 ⚙️ Project Pipeline
 1️⃣ Data Cleaning & Preprocessing (Data.ipynb)
 Data Validation
@@ -46,6 +48,7 @@ Used different encoding strategies depending on feature type:
 
 Label Encoding for ordinal variables
 One-Hot Encoding for nominal categorical variables
+
 2️⃣ Feature Engineering (Feature.ipynb)
 
 Created additional financial indicators to improve risk representation.
@@ -60,33 +63,20 @@ The goal was to better capture borrower behavior and repayment capacity beyond r
 
 3️⃣ Model Training (Train.ipynb)
 Data Splitting
-
 Used a strict:
-
 70% Training
 15% Validation
 15% Test
-
 split with stratify to preserve class distribution.
-
 The test set remained completely isolated until final evaluation.
-
 Handling Class Imbalance
-
 Because default cases are heavily underrepresented, the project used:
-
 scale_pos_weight
-
 to increase the learning importance of minority-class samples.
-
 This helps the model focus more on identifying risky borrowers.
-
 Hyperparameter Optimization
-
 Used Optuna for Bayesian hyperparameter optimization.
-
 Main tuned parameters included:
-
 learning_rate
 max_depth
 min_child_weight
