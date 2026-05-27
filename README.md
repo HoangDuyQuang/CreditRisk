@@ -1,4 +1,4 @@
-Credit Risk Default Prediction
+# Credit Risk Default Prediction
 
 ## 📌 Overview
 Credit Risk Default Prediction is an end-to-end machine learning project focused on predicting loan default risk in highly imbalanced financial datasets.
@@ -53,15 +53,11 @@ Initialize 4 new characteristics: free_cash_flow, net_income_after_total_debt, r
 PR-AUC
 Recall
 F2-Score
-
-- Final Test Performance
 - Ranking Performance
 Metric	Score
 PR-AUC	0.8937
 ROC-AUC	0.94
-
 - Business-Oriented Performance
-
 (Optimal Threshold = 0.21)
 
 - Metric	Score
@@ -71,7 +67,7 @@ ROC-AUC	0.94
 
 ## 📉 Confusion Matrix
 ### Final Confusion Matrix
-text
+```text
                   Predicted: Good (0)   Predicted: Default (1)
 Actual: Good (0)         3453                  368         (False Positives - Opportunity Cost)
 Actual: Default (1)       184                  882         (True Positives - Capital Saved)
