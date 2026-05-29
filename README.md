@@ -30,6 +30,7 @@ The final solution uses XGBoost, Optuna, and SHAP to create a robust, explainabl
 - ├── Data.ipynb        # Data cleaning & preprocessing
 - ├── Feature.ipynb     # Feature engineering
 - ├── Train.ipynb       # Model training, tuning, evaluation
+- ├── SQLQuery1.sql     # Query and analyze the parameters
 - ├── README.md
 
 ## ⚙️ Project Pipeline
