@@ -1,4 +1,4 @@
-﻿--- 1. loan_percent_income (Tỷ lệ Khoản vay / Thu nhập)
+﻿--- 1. loan_percent_income 
 
 SELECT DISTINCT
 	PERCENTILE_CONT(0.25)
