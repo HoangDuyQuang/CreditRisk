@@ -67,6 +67,23 @@ PR-AUC | Recall | F2-Score
 - Precision	0.71
 - F2-Score	0.7998
 
+## Values ​​derived from the analysis
+### I. Profiles of Customers Most Prone to Default
+
+- loan_percent_rate > 33% 
+- loan_grade D-G
+- person_income < 55000
+- loan_int_rate > 11%
+- loan_to_income > 32%
+- DTI > 42%
+
+### II. Riskiest Products
+Home Improvement, Medical, Debt Consolidation have a rate of 26.1 - 28.59%
+
+### III. Customers who rent or have unclear information about their housing situation have a high rate(~30%)
+
+
+
 ## 📉 Confusion Matrix
 ### Final Confusion Matrix
 ```text
