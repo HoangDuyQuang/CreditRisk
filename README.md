@@ -35,16 +35,16 @@ The final solution uses XGBoost, Optuna, and SHAP to create a robust, explainabl
 ## ⚙️ Project Pipeline
 
 The project pipeline is divided into two main phases, corresponding to the repository structure: 
-### Phase 1: Data Preprocessing & EDA (Data.ipynb) 
+#### Phase 1: Data Preprocessing & EDA (Data.ipynb) 
 1. **Business-Logic Data Cleaning:** Detected and removed absurd data points (e.g., applicant age > 100, or employment length exceeding actual working-age years).
 2. **Advanced Imputation:** Avoided naive mean imputation. Missing loan interest rates were filled using the median of their respective loan_grade; employment lengths were imputed contextually based on employment status or age-group medians.
 3. **Feature Encoding:** Applied *Label Encoding* for ordinal categorical variables (like loan_grade A-G) and *One-Hot Encoding* for nominal variables (intent, home_ownership).
 4. **Feature Engineering:** Synthesized new indicators such as total_debt to capture the financial leverage and debt burden of applicants.
 
-### Phase 2: Feature Engineering (Feature.ipynb) 
+#### Phase 2: Feature Engineering (Feature.ipynb) 
 - Initialize 4 new characteristics: free_cash_flow, net_income_after_total_debt, risk_emp_debt, and adjusted_loan_to_income.
 
-### Phase 3: Model Training & Risk Mitigation (Train.ipynb) 
+#### Phase 3: Model Training & Risk Mitigation (Train.ipynb) 
 1. **Strict Data Splitting:** Implemented a rigorous **70% Train / 15% Validation / 15% Test** split. Used the stratify parameter to preserve the highly imbalanced class distribution across all sets. The Test set was strictly locked away until final evaluation.
 2. **Class Imbalance Handling:** Calculated the financial_weights to penalize the XGBoost loss function, forcing the model to focus on the minority default class.
 3. **Bayesian Hyperparameter Tuning:** Utilized Optuna to autonomously search for the optimal model complexity constraints (learning_rate, max_depth, colsample_bytree, subsample, min_child_weight).
@@ -53,13 +53,13 @@ The project pipeline is divided into two main phases, corresponding to the repos
 6. **Explainable AI (XAI):** Deployed SHAP's TreeExplainer to generate Global Summary Plots (identifying top risk drivers) and Local Waterfall Plots (providing transparent, individual explanations for loan rejections).
 
 ## 📊 Model Performance
-### The project focuses primarily on:
+#### The project focuses primarily on:
 PR-AUC | Recall | F2-Score
-### Ranking Performance
+#### Ranking Performance
 - Metric	Score
 - PR-AUC	0.8937
 - ROC-AUC	0.94
-### Business-Oriented Performance
+#### Business-Oriented Performance
 (Optimal Threshold = 0.21)
 
 - Metric	Score
@@ -68,7 +68,7 @@ PR-AUC | Recall | F2-Score
 - F2-Score	0.7998
 
 ## Values ​​derived from the analysis
-### I. Profiles of Customers Most Prone to Default
+#### I. Profiles of Customers Most Prone to Default
 
 - loan_percent_rate > 33% 
 - loan_grade D-G
@@ -77,15 +77,15 @@ PR-AUC | Recall | F2-Score
 - loan_to_income > 32%
 - DTI > 42%
 
-### II. Riskiest Products
+#### II. Riskiest Products
 Home Improvement, Medical, Debt Consolidation have a rate of 26.1 - 28.59%
 
-### III. Customers who rent or have unclear information about their housing situation have a high rate(~30%)
+#### III. Customers who rent or have unclear information about their housing situation have a high rate(~30%)
 
 
 
 ## 📉 Confusion Matrix
-### Final Confusion Matrix
+#### Final Confusion Matrix
 ```text
                   Predicted: Good (0)   Predicted: Default (1)
 Actual: Good (0)         3453                  368         (False Positives - Opportunity Cost)
