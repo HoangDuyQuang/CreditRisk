@@ -17,7 +17,7 @@ The final solution uses XGBoost, Optuna, and SHAP to create a robust, explainabl
 
 ## 🛠️ Tech Stack
 
-- Language: Python
+- Language: Python, SQL
 - Machine Learning: XGBoost
 - Hyperparameter Optimization: Optuna
 - Explainable AI: SHAP
